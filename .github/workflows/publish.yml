@@ -21,7 +21,8 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
           server-id: github
-          settings-path: ${{ github.workspace }}
+          server-username: GITHUB_ACTOR
+          server-password: GITHUB_TOKEN
       
       - name: Build with Maven
         run: mvn -B package --file pom.xml
@@ -29,4 +30,5 @@ jobs:
       - name: Publish to GitHub Packages
         run: mvn --batch-mode deploy
         env:
+          GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
