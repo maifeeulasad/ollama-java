@@ -28,4 +28,12 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/maifeeulasad/ollama-java</url>
+        </repository>
+    </distributionManagement>
+
 </project>
