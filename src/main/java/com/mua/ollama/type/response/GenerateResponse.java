@@ -1,11 +1,9 @@
 package com.mua.ollama.type.response;
 
-import com.mua.ollama.type.request.Message;
 import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 @Data
 public class GenerateResponse {
